@@ -1,0 +1,35 @@
+@import "../../App.module.scss";
+
+.root {
+  @include flexible-row-spacebet();
+  height: 76px;
+  background-color: $bg-primary-color;
+  padding: 0 70px;
+  .logo {
+    font-size: 22px;
+    line-height: 28px;
+    color: #22292a;
+    &::first-letter {
+      color: $primary-color;
+    }
+  }
+  .list {
+    @include flexible-row-spacebet();
+    gap: 30px;
+    list-style-type: none;
+    .link {
+      color: $primary-color;
+      text-decoration: none;
+      &::after {
+        content: "";
+        display: block;
+        border-bottom: 3px solid $primary-color;
+        width: 0%;
+        transition: 0.4s width;
+      }
+      &:hover::after {
+        width: 100%;
+      }
+    }
+  }
+}

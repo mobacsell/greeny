@@ -1,0 +1,21 @@
+$bg-primary-color: #e8f0f0;
+$primary-color: #78bd6a;
+
+@mixin flexible-row-spacebet() {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@mixin flexible-row-center() {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flexible-column-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }

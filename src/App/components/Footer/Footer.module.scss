@@ -1,0 +1,11 @@
+@import "../../App.module.scss";
+
+.root {
+  @include flexible-row-center();
+  height: 76px;
+  background-color: $bg-primary-color;
+  .time {
+    font-size: 14px;
+    line-height: 18px;
+  }
+}

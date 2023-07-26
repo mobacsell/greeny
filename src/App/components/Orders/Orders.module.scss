@@ -1,0 +1,46 @@
+@import "../../App.module.scss";
+
+.root {
+  @include flexible-column-center();
+  flex-grow: 1;
+}
+
+.headCell {
+  text-align: left;
+  font-size: 18px;
+  line-height: 22px;
+  padding: 16px 24px;
+  &:first-child {
+    padding-left: 42px;
+  }
+  &:last-child {
+    padding-right: 15px;
+    padding-left: 0px;
+  }
+}
+
+.cell {
+  font-size: 14px;
+  line-height: 18px;
+  padding: 16px 24px;
+  &:first-child {
+    padding-left: 42px;
+  }
+  &:last-child {
+    padding-right: 15px;
+    padding-left: 0px;
+  }
+}
+
+.btn {
+  min-width: 124px;
+  min-height: 38px;
+  background-color: $primary-color;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.2s background-color;
+  &:hover {
+    background-color: #7cd369;
+  }
+}
