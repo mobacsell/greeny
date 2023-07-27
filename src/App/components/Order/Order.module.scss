@@ -1,0 +1,45 @@
+@import "../../App.module.scss";
+
+.root {
+  @include flexible-column-center();
+  flex-grow: 1;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  .header {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  .order {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 24px;
+    background-color: $bg-primary-color;
+    padding: 12px 0 16px 0;
+    border-radius: 12px;
+    .headerCell {
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 16px 24px;
+      &:first-child {
+        padding-left: 42px;
+      }
+      &:last-child {
+        padding-right: 16px;
+        padding-left: 0px;
+      }
+    }
+    .cell {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 16px 24px;
+      &:first-child {
+        padding-left: 42px;
+      }
+      &:last-child {
+        padding-right: 16px;
+        padding-left: 0px;
+      }
+    }
+  }
+}

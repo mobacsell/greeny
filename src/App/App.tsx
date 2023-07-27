@@ -2,6 +2,7 @@ import { useApiData } from "../hooks/useApiData";
 import { Footer } from "./components/Footer";
 import { Header } from "./components/Header";
 import { Loader } from "./components/Loader";
+import { Order } from "./components/Order";
 import { Orders } from "./components/Orders";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
     <>
       {loading && <Loader />}
       <Header />
-      <Orders data={{ users, orders, products }} />
+      <Order />
+      {/* <Orders data={{ users, orders, products }} /> */}
       <Footer />
     </>
   );
