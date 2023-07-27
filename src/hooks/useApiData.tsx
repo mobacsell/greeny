@@ -11,24 +11,27 @@ export function useApiData() {
   const [users, setUsers] = useState<User[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
+  const [loading, setLoading] = useState<boolean>(false);
 
   const getData = async () => {
-  try {
-    const [users, orders, products] = await Promise.all([
-      getUsers(),
-      getOrders(),
-      getProducts(),
-    ]);
+    setLoading(true);
+    try {
+      const [users, orders, products] = await Promise.all([
+        getUsers(),
+        getOrders(),
+        getProducts(),
+      ]);
 
-    setUsers(users);
-    setOrders(orders);
-    setProducts(products);
-  } catch {}
+      setUsers(users);
+      setOrders(orders);
+      setProducts(products);
+    } catch {}
+    setLoading(false);
   };
 
   useEffect(() => {
     getData();
   }, []);
 
-  return { users, orders, products };
+  return { users, orders, products, loading };
 }
