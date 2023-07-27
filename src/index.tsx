@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Layout } from "./Layout/Layout";
 import { Order } from "./App/components/Order";
 import { Orders } from "./App/components/Orders";
+import { NoPage } from "./App/components/NoPage";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement
@@ -18,6 +19,7 @@ root.render(
           <Route path="/" element={<App />}>
             <Route index element={<Orders />} />
             <Route path="order" element={<Order />} />
+            <Route path="*" element={<NoPage />} />
           </Route>
         </Route>
       </Routes>
