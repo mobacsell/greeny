@@ -1,14 +1,16 @@
 import styles from "./Orders.module.scss";
 import { Button } from "./components/Button/Button";
-import { OrdersProps } from "./types";
 import { composeData } from "./utils/composeData";
+import { useApiData } from "../../../hooks/useApiData";
+import { Loader } from "../Loader";
 
-export function Orders({ data }: OrdersProps) {
-  const { users, orders, products } = data;
+export function Orders() {
+  const { users, orders, products, loading } = useApiData();
   const compositeData = composeData(users, orders, products);
 
   return (
     <>
+      {loading && <Loader />}
       <div className={styles.root}>
         <h1>Ордера</h1>
         <div className={styles.orders}>
