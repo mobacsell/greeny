@@ -29,7 +29,13 @@ export function Orders() {
                     <td className={styles.cell}>{value.product}</td>
                     <td className={styles.cell}>{value.price}</td>
                     <td className={styles.cell}>
-                      <Button size="sm" radius={true} text="Просмотреть" />
+                      <Button
+                        size="sm"
+                        radius={true}
+                        text="Просмотреть"
+                        handlerType="openOrder"
+                        orderId={value.id}
+                      />
                     </td>
                   </tr>
                 );
