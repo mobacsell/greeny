@@ -1,4 +1,5 @@
 import styles from "./Orders.module.scss";
+import { Button } from "./components/Button/Button";
 import { OrdersProps } from "./types";
 import { composeData } from "./utils/composeData";
 
@@ -26,7 +27,7 @@ export function Orders({ data }: OrdersProps) {
                     <td className={styles.cell}>{value.product}</td>
                     <td className={styles.cell}>{value.price}</td>
                     <td className={styles.cell}>
-                      <button className={styles.btn}>Просмотреть</button>
+                      <Button size="sm" radius={true} text="Просмотреть" />
                     </td>
                   </tr>
                 );
