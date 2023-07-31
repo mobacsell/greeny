@@ -12,7 +12,7 @@ export function Orders() {
     <>
       {loading && <Loader />}
       <div className={styles.root}>
-        <h1>Предложения</h1>
+        <h1 className={styles.header}>Предложения</h1>
         <div className={styles.orders}>
           <table className={styles.table}>
             <tbody>

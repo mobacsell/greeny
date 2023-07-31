@@ -3,8 +3,6 @@
 .root {
   @include flexible-column-center();
   flex-grow: 1;
-  margin-top: 50px;
-  margin-bottom: 50px;
   .header {
     font-size: 22px;
     line-height: 28px;
@@ -12,7 +10,6 @@
   .order {
     display: flex;
     justify-content: flex-end;
-    margin-top: 24px;
     background-color: $bg-primary-color;
     padding: 12px 0 16px 0;
     border-radius: 12px;
@@ -41,5 +38,47 @@
         padding-left: 0px;
       }
     }
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .root {
+    .header {
+      font-size: 18px;
+      line-height: 22px;
+    }
+    .order {
+      padding: 6px;
+      .headerCell {
+        font-size: 12px;
+        line-height: 16px;
+        padding: 16px 8px;
+        &:first-child {
+          padding-left: 10px;
+        }
+        &:last-child {
+          padding-right: 6px;
+        }
+      }
+      .cell {
+        box-sizing: border-box;
+        font-size: 10px;
+        line-height: 14px;
+        padding: 8px;
+        max-width: 96px;
+        &:first-child {
+          padding-left: 10px;
+        }
+        &:last-child {
+          padding-right: 6px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+  .root {
+    width: 320px;
   }
 }

@@ -31,8 +31,8 @@ export function Order() {
     if (posting) {
       setPosting(true);
       await makeOrder();
-      setPosting(false);
       setOrderStatus("ordered");
+      setPosting(false);
     }
     setShowModal(!showModal);
   };
@@ -45,7 +45,7 @@ export function Order() {
     return (
       <>
         {loading && <Loader />}
-        <NoOrder />;
+        <NoOrder />
       </>
     );
   }
@@ -63,6 +63,7 @@ export function Order() {
                 <th className={styles.headerCell}>Продавец</th>
                 <th className={styles.headerCell}>Товар</th>
                 <th className={styles.headerCell}>Цена</th>
+                <th className={styles.headerCell}></th>
               </tr>
               <tr>
                 <td className={styles.cell}>{name}</td>

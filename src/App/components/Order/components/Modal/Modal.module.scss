@@ -27,3 +27,22 @@
 .none {
   display: none;
 }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .root {
+    .modal {
+      width: 230px;
+      height: 134px;
+      .content {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+}
+
+@media (max-width: 320px) and (orientation: portrait) {
+  .root {
+    width: 320px;
+  }
+}

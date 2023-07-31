@@ -7,7 +7,7 @@ export function Header() {
       <div className={styles.logo}>
         <Link to="./" className={styles.logoLink}>Greeny</Link>
       </div>
-      <nav>
+      <nav className={styles.navigation}>
         <ul className={styles.list}>
           <li className={styles.item}>
             <Link to="./" className={styles.link}>

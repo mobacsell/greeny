@@ -21,3 +21,9 @@ code {
   justify-content: flex-start;
   min-height: 100vh;
 }
+
+@media (max-width: 320px) and (orientation: portrait) {
+  #root {
+    width: 320px;
+  }
+}

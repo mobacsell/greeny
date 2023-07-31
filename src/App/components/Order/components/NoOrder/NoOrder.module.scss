@@ -2,3 +2,9 @@
   flex-grow: 1;
   margin: 30px;
 }
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .root {
+    font-size: 12px;
+  }
+}

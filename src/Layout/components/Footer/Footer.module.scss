@@ -9,3 +9,9 @@
     line-height: 18px;
   }
 }
+
+@media (max-width: 320px) and (orientation: portrait) {
+  .root {
+    width: 320px;
+  }
+}

@@ -7,7 +7,7 @@
   padding: 0 70px;
   .logo {
     font-size: 22px;
-    line-height: 28px;
+    line-height: 76px;
     color: #22292a;
     &::first-letter {
       color: $primary-color;
@@ -17,22 +17,48 @@
       text-decoration: none;
     }
   }
-  .list {
-    @include flexible-row-spacebet();
-    gap: 30px;
-    list-style-type: none;
-    .link {
-      color: $primary-color;
-      text-decoration: none;
-      &::after {
-        content: "";
-        display: block;
-        border-bottom: 3px solid $primary-color;
-        width: 0%;
-        transition: 0.4s width;
+  .navigation {
+    height: 100%;
+    .list {
+      @include flexible-row-spacebet();
+      margin: 0;
+      height: 100%;
+      gap: 30px;
+      list-style-type: none;
+      .link {
+        color: $primary-color;
+        text-decoration: none;
+        &::after {
+          content: "";
+          display: block;
+          border-bottom: 3px solid $primary-color;
+          width: 0%;
+          transition: 0.4s width;
+        }
+        &:hover::after {
+          width: 100%;
+        }
       }
-      &:hover::after {
-        width: 100%;
+    }
+  }
+}
+
+@media (max-width: 600px) and (orientation: portrait) {
+  .root {
+    padding: 0 36px;
+    .logo {
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+    .navigation {
+      .list {
+        @include flexible-column-center();
+        gap: 8px;
+        -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+        .link {
+          &:hover::after {
+            width: 0%;
+          }
+        }
       }
     }
   }
