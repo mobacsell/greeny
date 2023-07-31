@@ -11,7 +11,7 @@ export const data: User[] = [
   },
   {
     id: 2,
-    name: "Продавец Алексев",
+    name: "Продавец Алексей",
   },
   {
     id: 3,
