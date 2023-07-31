@@ -12,6 +12,10 @@
     &::first-letter {
       color: $primary-color;
     }
+    .logoLink {
+      color: #22292a;
+      text-decoration: none;
+    }
   }
   .list {
     @include flexible-row-spacebet();
