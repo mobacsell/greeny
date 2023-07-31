@@ -4,7 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { Button } from "../../../shared/Button";
 import { useApiData } from "../../../hooks/useApiData";
 import { composeData } from "./utils/composeData";
-import { Loader } from "../Loader";
+import { Loader } from "../../../shared/Loader";
 import { NoOrder } from "./components/NoOrder";
 import { Modal } from "./components/Modal";
 import { makeOrder } from "../../../api/orders/makeOrder";
