@@ -3,31 +3,34 @@
 .root {
   @include flexible-column-center();
   flex-grow: 1;
-}
-
-.headCell {
-  text-align: left;
-  font-size: 18px;
-  line-height: 22px;
-  padding: 16px 24px;
-  &:first-child {
-    padding-left: 42px;
-  }
-  &:last-child {
-    padding-right: 15px;
-    padding-left: 0px;
-  }
-}
-
-.cell {
-  font-size: 14px;
-  line-height: 18px;
-  padding: 16px 24px;
-  &:first-child {
-    padding-left: 42px;
-  }
-  &:last-child {
-    padding-right: 15px;
-    padding-left: 0px;
+  .table {
+    background-color: $bg-primary-color;
+    border-radius: 12px;
+    padding: 12px;
+    .headCell {
+      text-align: left;
+      font-size: 18px;
+      line-height: 22px;
+      padding: 16px 24px;
+      &:first-child {
+        padding-left: 42px;
+      }
+      &:last-child {
+        padding-right: 15px;
+        padding-left: 0px;
+      }
+    }
+    .cell {
+      font-size: 14px;
+      line-height: 18px;
+      padding: 16px 24px;
+      &:first-child {
+        padding-left: 42px;
+      }
+      &:last-child {
+        padding-right: 15px;
+        padding-left: 0px;
+      }
+    }
   }
 }

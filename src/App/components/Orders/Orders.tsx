@@ -12,9 +12,9 @@ export function Orders() {
     <>
       {loading && <Loader />}
       <div className={styles.root}>
-        <h1>Ордера</h1>
+        <h1>Предложения</h1>
         <div className={styles.orders}>
-          <table>
+          <table className={styles.table}>
             <tbody>
               <tr key="headTable">
                 <th className={styles.headCell}>Продавец</th>
