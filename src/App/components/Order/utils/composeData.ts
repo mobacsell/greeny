@@ -14,11 +14,11 @@ export const composeData = (
   });
 
   const [product] = products.filter((value) => {
-    return value.id === order.productId;
+    return typeof order === "object" ? value.id === order.productId : false;
   });
 
   const [user] = users.filter((value) => {
-    return value.id === order.sellerId;
+    return typeof order === "object" ? value.id === order.sellerId : false;
   });
 
   return {

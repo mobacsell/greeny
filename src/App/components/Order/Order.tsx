@@ -4,6 +4,7 @@ import { Button } from "../Orders/components/Button";
 import { useApiData } from "../../../hooks/useApiData";
 import { composeData } from "./utils/composeData";
 import { Loader } from "../Loader";
+import { NoOrder } from "./components/NoOrder";
 
 export function Order() {
   const [urlParam] = useSearchParams();
@@ -16,6 +17,19 @@ export function Order() {
     products,
     orders
   );
+
+  if (
+    orderId > orders.length - 1 ||
+    urlParam.get("id") === null ||
+    urlParam.get("id") === ""
+  ) {
+    return (
+      <>
+        {loading && <Loader />}
+        <NoOrder />;
+      </>
+    );
+  }
 
   return (
     <>
