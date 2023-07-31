@@ -11,10 +11,9 @@ export function useApiData() {
   const [users, setUsers] = useState<User[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
   const [products, setProducts] = useState<Product[]>([]);
-  const [loading, setLoading] = useState<boolean>(false);
+  const [loading, setLoading] = useState<boolean>(true);
 
   const getData = async () => {
-    setLoading(true);
     try {
       const [users, orders, products] = await Promise.all([
         getUsers(),
