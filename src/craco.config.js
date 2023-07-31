@@ -8,6 +8,8 @@ module.exports = {
       "@hooks": resolvePath("./src/hooks/"),
       "@utils": resolvePath("./src/utils/"),
       "@types": resolvePath("./src/types/"),
+      "@App": resolvePath("./src/App/"),
+      "@shared": resolvePath("./src/sahred/"),
     },
   },
 };

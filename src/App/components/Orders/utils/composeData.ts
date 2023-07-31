@@ -1,6 +1,6 @@
-import { Order } from "../../../../types/Order";
-import { Product } from "../../../../types/Product";
-import { User } from "../../../../types/User";
+import { Order } from "types/Order";
+import { Product } from "types/Product";
+import { User } from "types/User";
 import { ResultComposeData } from "../types";
 
 export const composeData = (

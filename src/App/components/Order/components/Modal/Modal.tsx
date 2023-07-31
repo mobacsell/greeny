@@ -1,5 +1,5 @@
 import styles from "./Modal.module.scss";
-import { Button } from "../../../../../shared/Button";
+import { Button } from "shared/Button";
 import { ModalProps } from "./types";
 
 export function Modal({ showModal, toggleModal }: ModalProps) {

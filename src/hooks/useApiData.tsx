@@ -1,11 +1,11 @@
 import { useEffect } from "react";
-import { getOrders } from "../api/orders/getOrders";
-import { getProducts } from "../api/products/getProducts";
-import { getUsers } from "../api/users/getUsers";
+import { getOrders } from "api/orders/getOrders";
+import { getProducts } from "api/products/getProducts";
+import { getUsers } from "api/users/getUsers";
 import { useState } from "react";
-import { User } from "../types/User";
-import { Order } from "../types/Order";
-import { Product } from "../types/Product";
+import { User } from "types/User";
+import { Order } from "types/Order";
+import { Product } from "types/Product";
 
 export function useApiData() {
   const [users, setUsers] = useState<User[]>([]);

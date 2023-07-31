@@ -1,13 +1,13 @@
 import styles from "./Order.module.scss";
 import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Button } from "../../../shared/Button";
-import { useApiData } from "../../../hooks/useApiData";
+import { Button } from "shared/Button";
+import { useApiData } from "hooks/useApiData";
 import { composeData } from "./utils/composeData";
-import { Loader } from "../../../shared/Loader";
+import { Loader } from "shared/Loader";
 import { NoOrder } from "./components/NoOrder";
 import { Modal } from "./components/Modal";
-import { makeOrder } from "../../../api/orders/makeOrder";
+import { makeOrder } from "api/orders/makeOrder";
 
 export function Order() {
   const [showModal, setShowModal] = useState<boolean>(false);
