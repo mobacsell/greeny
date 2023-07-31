@@ -1,5 +1,5 @@
 import styles from "./Orders.module.scss";
-import { Button } from "./components/Button/Button";
+import { Button } from "../../../shared/Button/Button";
 import { composeData } from "./utils/composeData";
 import { useApiData } from "../../../hooks/useApiData";
 import { Loader } from "../Loader";

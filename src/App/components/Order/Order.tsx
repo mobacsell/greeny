@@ -1,12 +1,21 @@
 import styles from "./Order.module.scss";
+import { useState } from "react";
 import { useSearchParams } from "react-router-dom";
-import { Button } from "../Orders/components/Button";
+import { Button } from "../../../shared/Button";
 import { useApiData } from "../../../hooks/useApiData";
 import { composeData } from "./utils/composeData";
 import { Loader } from "../Loader";
 import { NoOrder } from "./components/NoOrder";
+import { Modal } from "./components/Modal";
+import { makeOrder } from "../../../api/orders/makeOrder";
 
 export function Order() {
+  const [showModal, setShowModal] = useState<boolean>(false);
+  const [posting, setPosting] = useState<boolean>(false);
+  const [orderStatus, setOrderStatus] = useState<"available" | "ordered">(
+    "available"
+  );
+
   const [urlParam] = useSearchParams();
   const orderId = Number(urlParam.get("id"));
 
@@ -17,6 +26,16 @@ export function Order() {
     products,
     orders
   );
+
+  const toggleModal = async (posting: boolean) => {
+    if (posting) {
+      setPosting(true);
+      await makeOrder();
+      setPosting(false);
+      setOrderStatus("ordered");
+    }
+    setShowModal(!showModal);
+  };
 
   if (
     orderId > orders.length - 1 ||
@@ -34,6 +53,7 @@ export function Order() {
   return (
     <>
       {loading && <Loader />}
+      {posting && <Loader />}
       <div className={styles.root}>
         <h1 className={styles.header}>Предложение (арт. {orderId})</h1>
         <div className={styles.order}>
@@ -53,13 +73,16 @@ export function Order() {
                     size="sm"
                     radius={true}
                     text="Заказать"
+                    orderStatus={orderStatus}
                     handlerType="makeOrder"
+                    toggleModal={toggleModal}
                   />
                 </td>
               </tr>
             </tbody>
           </table>
         </div>
+        <Modal showModal={showModal} toggleModal={toggleModal} />
       </div>
     </>
   );

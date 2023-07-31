@@ -1,4 +1,4 @@
-@import "../../../../App.module.scss";
+@import "../../App/App.module.scss";
 
 .root {
   min-width: 124px;
@@ -27,4 +27,12 @@
 
 .radius {
   border-radius: 12px;
+}
+
+.disabled {
+  min-width: 124px;
+  min-height: 38px;
+  background-color: #a0a0a0;
+  border: 0;
+  color: #fff;
 }

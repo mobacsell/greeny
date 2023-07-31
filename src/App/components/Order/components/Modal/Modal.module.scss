@@ -1,0 +1,29 @@
+@import "../../../../App.module.scss";
+
+.root {
+  @include flexible-row-center();
+  position: fixed;
+  top: 0;
+  background-color: #35353555;
+  width: 100vw;
+  height: 100vh;
+  .modal {
+    margin-top: 45px;
+    @include flexible-column-start();
+    background-color: $bg-primary-color;
+    width: 260px;
+    height: 150px;
+    border-radius: 12px;
+    gap: 16px;
+    .content {
+      margin: 0px;
+      margin-top: 48px;
+      font-size: 18px;
+      line-height: 22px;
+    }
+  }
+}
+
+.none {
+  display: none;
+}
