@@ -3,6 +3,9 @@ import { Product } from "types/Product";
 import { User } from "types/User";
 import { ResultComposeData } from "../types";
 
+/**
+ * Функция-утилита composeData форматирует данные для вывода всех предложений(аналог sql-запроса), преобразовывая выходные данные хука useApiData
+ */
 export const composeData = (
   users: User[],
   orders: Order[],

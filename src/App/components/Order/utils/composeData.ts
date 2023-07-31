@@ -3,6 +3,9 @@ import { Product } from "types/Product";
 import { User } from "types/User";
 import { OrderData } from "../types";
 
+/**
+ * Функция-утилита composeData позволяет получить данные по конкретному предложению, преобразовывая выходные данные хука useApiData
+ */
 export const composeData = (
   orderId: number,
   users: User[],

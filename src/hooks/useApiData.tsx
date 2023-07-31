@@ -7,6 +7,9 @@ import { User } from "types/User";
 import { Order } from "types/Order";
 import { Product } from "types/Product";
 
+/**
+ * Хук useApiData получает данные из асинхронных мок-функций getOrder, getProducts, getUsers, имитируя получения данных с сервера.
+ */
 export function useApiData() {
   const [users, setUsers] = useState<User[]>([]);
   const [orders, setOrders] = useState<Order[]>([]);
